@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Возрастная проверка</title>
+</head>
+<body>
+
+    <h1>Введите ваш возраст</h1>
+
+    <!-- Поле ввода для возраста -->
+    <input type="number" id="ageInput" placeholder="Введите возраст" />
+
+    <!-- Кнопка для выполнения проверки -->
+    <button onclick="greetByAge()">Проверить</button>
+
+    <!-- Место для вывода сообщения -->
+    <p id="greetingMessage"></p>
+
+    <script>
+        function greetByAge() {
+            // Получаем введённый возраст
+            let age = document.getElementById("ageInput").value;
+
+            // Получаем элемент для вывода сообщения
+            let messageElement = document.getElementById("greetingMessage");
+
+            // Проверяем возраст и выводим соответствующее сообщение
+            if (age < 18) {
+                alert("Привет, малыш!");
+            } else {
+                alert("Здравствуйте, юноша!");
+            }
+        }
+    </script>
+
+</body>
+</html>
